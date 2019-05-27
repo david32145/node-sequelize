@@ -19,9 +19,9 @@ module.exports.cad = (req, res)=>{
         .catch((err)=>{
             console.log(err)
             res.status(400).send({error: 'aluno nao cadastrado'})
+        }).finally(()=>{
+            db.close()
         })
-
-        db.close()
     }
 }
 
@@ -37,7 +37,8 @@ module.exports.listAll = (req, res)=>{
     .catch((err)=>{
         console.log(err)
         res.status(400).send({error: 'error inesperado!!!'})
+    }).finally(()=>{
+        db.close()
     })
 
-    db.close()
 }
