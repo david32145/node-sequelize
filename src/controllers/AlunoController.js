@@ -38,7 +38,7 @@ module.exports.listAll = (req, res)=>{
         console.log(err)
         res.status(400).send({error: 'error inesperado!!!'})
     }).finally(()=>{
-        db.close()
+        db.close() 
     })
 
 }

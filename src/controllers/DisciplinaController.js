@@ -20,7 +20,7 @@ module.exports.cad = (req, res)=>{
             console.log(err)
             res.status(400).send({error: 'disciplina nao cadastrado!!!'})
         }).finally(()=>{
-            db.close()
+            db.close() 
         })
 
     }
